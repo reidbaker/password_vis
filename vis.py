@@ -3,7 +3,7 @@ from yahoo_passwords import YAHOO_PASSWORDS_SMALL
 from billabong_paswords import BILLABONG_PASWORDS_SMALL
 from myspace_passwords import MYSPACE_PASSWORDS_SMALL
 
-yahoo_tags = make_tags(YAHOO_PASSWORDS_SMALL)
+yahoo_tags = make_tags(YAHOO_PASSWORDS_SMALL, maxsize=120)
 billabong_tags = make_tags(BILLABONG_PASWORDS_SMALL, maxsize=120)
 myspace_tags = make_tags(MYSPACE_PASSWORDS_SMALL, maxsize=120)
 
