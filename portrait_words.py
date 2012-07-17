@@ -35,7 +35,37 @@ def main():
         print 'Must enter photo in this directory'
 
 def wordize(image_data):
+    posterized = black_posterize(image_data)
     return image_data
+
+def black_posterize(image, threshold):
+    copy_image = Image.new(image.mode, image.size, (255, 0, 0))
+    width, height = copy_image.size
+    pixels = image.load()
+    copy_pixels = copy_image.load()
+    for i in range(width):
+        for j in range(height):
+            r, g, b = pixels[i, j]
+            average = (r + g + b) / 3
+            if average < threshold:
+                copy_pixels[i, j] = (average, average, average)
+    return copy_image
+
+def invert(img):
+    width, height = img.size
+    pixels = img.load()
+    for x in range(width):
+        for y in range(height):
+            r, g, b = pixels[x, y]
+            pixels[x, y] = (255 - r, 255 - g, 255 - b)
+    return img
+
+def init_test(img):
+    from PIL import Image
+    from portrait_words import black_posterize
+    image = Image.open(img)
+    ret = black_posterize(image, 150)
+    ret.save('output.jpg', 'JPEG')
 
 def safe_save(full_filename, new_image_data):
     """
