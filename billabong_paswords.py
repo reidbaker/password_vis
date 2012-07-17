@@ -1,5 +1,5 @@
 BILLABONG_PASWORDS_SMALL = [
-('billabong',207),
+('billabong',75),
 ('surfing',53),
 ('surfer',33),
 ('soccer',22),
