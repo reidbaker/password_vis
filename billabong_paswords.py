@@ -1,4 +1,4 @@
-BILLABONG_PASWORDS = [
+BILLABONG_PASWORDS_SMALL = [
 ('billabong',207),
 ('surfing',53),
 ('surfer',33),

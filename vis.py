@@ -1,6 +1,10 @@
 from pytagcloud import create_tag_image, make_tags
 from yahoo_passwords import YAHOO_PASSWORDS_SMALL
+from billabong_paswords import BILLABONG_PASWORDS_SMALL
 
-tags = make_tags(YAHOO_PASSWORDS_SMALL, maxsize=120)
+yahoo_tags = make_tags(YAHOO_PASSWORDS_SMALL, maxsize=120)
+billabong_tags = make_tags(BILLABONG_PASWORDS_SMALL, maxsize=120)
 
-create_tag_image(tags, 'cloud_large.png', size=(900, 600), fontname='Lobster')
+create_tag_image(yahoo_tags, 'cloud_yahoo.png', size=(900, 600), fontname='Lobster')
+create_tag_image(billabong_tags, 'cloud_billabong.png', size=(900, 600), fontname='Lobster')
+
