@@ -6,8 +6,8 @@ text password leaks from yahoo and billabong.
 
 To run first install [PyTagCloud][1] 
 Then clone Repo
-`git clone https://github.com/reidbaker/password_vis.git`
+>`git clone https://github.com/reidbaker/password_vis.git`
 
 Then run vis.py
-`python vis.py`
+>`python vis.py`
 
