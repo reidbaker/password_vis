@@ -66,7 +66,9 @@ def invert(img):
             pixels[x, y] = (255 - r, 255 - g, 255 - b)
 
 # Given the input image, this method changes all pixels with the exact color
-# in the parameters to be transparent.
+# in the parameters to be transparent. The threshold is required because
+# exact colors don't always happen, which is bizarre...
+# @author Sean Gillespie
 def color_to_transparent(img, color, threshold):
     converted_img = img.convert('RGBA') # allow manipulation of alpha
     pixels = converted_img.load()
@@ -78,13 +80,15 @@ def color_to_transparent(img, color, threshold):
                 pixels[x, y] = (pixels[x, y][0], pixels[x, y][1], pixels[x, y][2], 0)
     return converted_img
 
+# for debug purposes only
+# @author Sean Gillespie
 def init_test(img):
     from PIL import Image
     from portrait_words import black_posterize
     image = Image.open(img)
     ret = black_posterize(image, 150)
     ret2 = color_to_transparent(ret, (255, 0, 0), 10)
-    ret2.save('output.jpg', 'jpeg')
+    ret2.save('output.png', 'png')
 
 def safe_save(full_filename, new_image_data):
     """
