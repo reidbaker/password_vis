@@ -16,27 +16,43 @@ WHITE = (255,255,255)
 BLACK = (0,0,0)
 BLACK_SET = (BLACK,)
 
-yahoo_tags = make_tags(YAHOO_PASSWORDS_SMALL, maxsize=120, colors=BLACK_SET)
-create_tag_image(yahoo_tags, 'cloud_yahoo.png', size=(900, 600), fontname='Lobster')
+def main():
+    transparent_word_cloud(
+        'cloud_yahoo.png',
+        YAHOO_PASSWORDS_SMALL,
+        0,
+        'Lobster'
+    )
 
-billabong_tags = make_tags(BILLABONG_PASWORDS_SMALL, maxsize=120, colors=BLACK_SET)
-create_tag_image(billabong_tags, 'cloud_billabong.png', size=(900, 600), fontname='Lobster')
+    transparent_word_cloud(
+        'cloud_billabong.png',
+        BILLABONG_PASWORDS_SMALL,
+        45,
+        'Lobster'
+    )
 
-myspace_tags = make_tags(MYSPACE_PASSWORDS_SMALL, maxsize=120, colors=BLACK_SET)
-create_tag_image(myspace_tags, 'cloud_myspace.png', size=(900, 600), fontname='Lobster')
+    transparent_word_cloud(
+        'cloud_myspace.png',
+        MYSPACE_PASSWORDS_SMALL,
+        0,
+        'Lobster'
+    )
 
-def transparent_word_cloud(name, password_count, fontname, rotation_degrees):
+def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     '''
     Args:
         name - string that is the name to save png
         password_count - list of tuples of [('password', count)]
-        fontname - one of the fonts available to pytagcloud
         rotation_degrees - number of degrees to rotate text
+        fontname - one of the fonts available to pytagcloud
     '''
     threshold = 10
-    tags = make_tags(password_count, maxsize=120, colors=BLACK)
+    tags = make_tags(password_count, maxsize=120, colors=BLACK_SET)
     create_tag_image(tags, name, size=(900, 600), fontname=fontname)
     words = Image.open(name)
     words = color_to_transparent(words.rotate(rotation_degrees), WHITE, threshold)
     safe_save(name, words)
     os.remove(name)
+
+if __name__ == "__main__":
+    main()
