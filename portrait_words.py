@@ -35,8 +35,32 @@ def main():
         print 'Must enter photo in this directory'
 
 def wordize(image_data):
-    posterized = black_posterize(image_data)
-    return image_data
+    posterized = black_posterize(image_data, 150)
+    transparent = color_to_transparent(posterized, (255, 0, 0), 10)
+    text_img = Image.open('cloud_billabong.png')
+    text_x, text_y = text_img.size
+    output_img = combine_with_mask(transparent, text_img, transparent)
+    return output_img
+
+def combine_with_mask(image1, image2, mask):
+    '''
+    Combines two images into one image such that image2 exists on top of image
+    1. The alpha of the mask is used to determine where image2 is pasted onto
+    image1.
+    WARNING AT THIS POINT IN DEVELOPMENT THIS CODE DOES NOT DO BOUNDS CHECKING
+    @author Sean Gillespie
+    '''
+    img1pix = image1.load()
+    img2pix = image2.load()
+    maskpix = mask.load()
+    img1width, img1height = image1.size
+    img2width, img2height = image2.size
+    for x in range(img1width):
+        for y in range(img1height):
+            r, g, b, a = maskpix[x, y]
+            if a != 0:
+                img1pix[x, y] = img2pix[x % img2width, y % img2height]
+    return image1
 
 def black_posterize(image, threshold):
     '''
