@@ -38,6 +38,9 @@ def wordize(image_data):
     posterized = black_posterize(image_data)
     return image_data
 
+# Posterizes an image such that light pixels are rendered transparent.
+# Returns a new image.
+# @author Sean Gillespie
 def black_posterize(image, threshold):
     copy_image = Image.new(image.mode, image.size, (255, 0, 0))
     width, height = copy_image.size
@@ -51,6 +54,9 @@ def black_posterize(image, threshold):
                 copy_pixels[i, j] = (average, average, average)
     return copy_image
 
+# Inverts an image. This operation is done in place and does not return
+# a new image.
+# @author Sean Gillespie
 def invert(img):
     width, height = img.size
     pixels = img.load()
@@ -58,14 +64,27 @@ def invert(img):
         for y in range(height):
             r, g, b = pixels[x, y]
             pixels[x, y] = (255 - r, 255 - g, 255 - b)
-    return img
+
+# Given the input image, this method changes all pixels with the exact color
+# in the parameters to be transparent.
+def color_to_transparent(img, color, threshold):
+    converted_img = img.convert('RGBA') # allow manipulation of alpha
+    pixels = converted_img.load()
+    width, height = converted_img.size
+    for x in range(width):
+        for y in range(height):
+            diff = (pixels[x, y][0] - color[0], pixels[x, y][1] - color[1], pixels[x, y][2] - color[2])
+            if abs(diff[0]) < threshold and abs(diff[1]) < threshold and abs(diff[2]) < threshold:
+                pixels[x, y] = (pixels[x, y][0], pixels[x, y][1], pixels[x, y][2], 0)
+    return converted_img
 
 def init_test(img):
     from PIL import Image
     from portrait_words import black_posterize
     image = Image.open(img)
     ret = black_posterize(image, 150)
-    ret.save('output.jpg', 'JPEG')
+    ret2 = color_to_transparent(ret, (255, 0, 0), 10)
+    ret2.save('output.jpg', 'jpeg')
 
 def safe_save(full_filename, new_image_data):
     """
