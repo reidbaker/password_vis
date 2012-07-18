@@ -38,10 +38,12 @@ def wordize(image_data):
     posterized = black_posterize(image_data)
     return image_data
 
-# Posterizes an image such that light pixels are rendered transparent.
-# Returns a new image.
-# @author Sean Gillespie
 def black_posterize(image, threshold):
+    '''
+    Posterizes an image such that light pixels are rendered transparent.
+    Returns a new image.
+    @author Sean Gillespie
+    '''
     copy_image = Image.new(image.mode, image.size, (255, 0, 0))
     width, height = copy_image.size
     pixels = image.load()
