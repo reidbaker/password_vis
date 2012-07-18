@@ -17,11 +17,12 @@ BLACK = (0,0,0)
 BLACK_SET = (BLACK,)
 
 yahoo_tags = make_tags(YAHOO_PASSWORDS_SMALL, maxsize=120, colors=BLACK_SET)
-billabong_tags = make_tags(BILLABONG_PASWORDS_SMALL, maxsize=120, colors=BLACK_SET)
-myspace_tags = make_tags(MYSPACE_PASSWORDS_SMALL, maxsize=120, colors=BLACK_SET)
-
 create_tag_image(yahoo_tags, 'cloud_yahoo.png', size=(900, 600), fontname='Lobster')
+
+billabong_tags = make_tags(BILLABONG_PASWORDS_SMALL, maxsize=120, colors=BLACK_SET)
 create_tag_image(billabong_tags, 'cloud_billabong.png', size=(900, 600), fontname='Lobster')
+
+myspace_tags = make_tags(MYSPACE_PASSWORDS_SMALL, maxsize=120, colors=BLACK_SET)
 create_tag_image(myspace_tags, 'cloud_myspace.png', size=(900, 600), fontname='Lobster')
 
 def transparent_word_cloud(name, password_count, fontname, rotation_degrees):
@@ -33,9 +34,9 @@ def transparent_word_cloud(name, password_count, fontname, rotation_degrees):
         rotation_degrees - number of degrees to rotate text
     '''
     threshold = 10
-    yahoo_tags = make_tags(password_count, maxsize=120, colors=BLACK)
-    create_tag_image(yahoo_tags, name, size=(900, 600), fontname=fontname)
+    tags = make_tags(password_count, maxsize=120, colors=BLACK)
+    create_tag_image(tags, name, size=(900, 600), fontname=fontname)
     words = Image.open(name)
-    words = color_to_transparent(yahoo_words.rotate(rotation_degrees), WHITE, threshold)
+    words = color_to_transparent(words.rotate(rotation_degrees), WHITE, threshold)
     safe_save(name, words)
     os.remove(name)
