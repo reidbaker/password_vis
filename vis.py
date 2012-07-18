@@ -9,7 +9,7 @@ from portrait_words import safe_save
 
 # Constants stored elsewhere
 from yahoo_passwords import YAHOO_PASSWORDS_SMALL
-from billabong_paswords import BILLABONG_PASWORDS_SMALL
+from billabong_passwords import BILLABONG_PASSWORDS_SMALL
 from myspace_passwords import MYSPACE_PASSWORDS_SMALL
 
 WHITE = (255,255,255)
@@ -26,7 +26,7 @@ def main():
 
     transparent_word_cloud(
         'cloud_billabong.png',
-        BILLABONG_PASWORDS_SMALL,
+        BILLABONG_PASSWORDS_SMALL,
         45,
         'Lobster'
     )
