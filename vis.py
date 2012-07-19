@@ -74,10 +74,9 @@ def transparent_combine(image1_str, image2_str, image3_str):
 
     image1 = Image.open(image1_str).crop(size)
     img1pix = image1.load()
-    image2 = Image.open(image2_str).crop(size)
-    img2pix = image2.load()
-    image3 = Image.open(image3_str).crop(size)
-    img3pix = image3.load()
+
+    img2pix = Image.open(image2_str).crop(size).load()
+    img3pix = Image.open(image3_str).crop(size).load()
     for x in range(width):
         for y in range(height):
             alpha_loc = 3
