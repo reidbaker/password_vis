@@ -34,15 +34,15 @@ def main():
     transparent_word_cloud(
         'cloud_myspace.png',
         MYSPACE_PASSWORDS_SMALL,
-        0,
+        -30,
         'Tangerine'
     )
+    size = (0,0,890,500)
     im = transparent_combine(
-        Image.open("cloud_billabong_modified.png").crop((0,0,890,500)),
-        Image.open("cloud_myspace_modified.png").crop((0,0,890,500)),
-        Image.open("cloud_yahoo_modified.png").crop((0,0,890,500)),
+        Image.open("cloud_billabong_modified.png").crop(size),
+        Image.open("cloud_myspace_modified.png").crop(size),
+        Image.open("cloud_yahoo_modified.png").crop(size),
     )
-    im.rotate(Image.ROTATE_90)
     safe_save("output.png", im)
 
 def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
