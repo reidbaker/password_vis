@@ -37,11 +37,10 @@ def main():
         -30,
         'Tangerine'
     )
-    size = (0,0,890,500)
     im = transparent_combine(
-        Image.open("cloud_billabong_modified.png").crop(size),
-        Image.open("cloud_myspace_modified.png").crop(size),
-        Image.open("cloud_yahoo_modified.png").crop(size),
+        "cloud_yahoo_modified.png",
+        "cloud_billabong_modified.png",
+        "cloud_myspace_modified.png"
     )
     safe_save("output.png", im)
 
@@ -61,19 +60,26 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     safe_save(name, words)
     os.remove(name)
 
-def transparent_combine(image1, image2, image3):
+def transparent_combine(image1_str, image2_str, image3_str):
     '''
-    Combines 3 images such that the greatest alpha layer is preserved
+    Combines images 2 and 3 onto image 1 such that
+    the greatest alpha layer is preserved
     Args:
-        All three PIL image data of the same size
+        All three are strings that correspond to a png file
     '''
     BLACK = (0,0,0)
+    width = 890
+    height = 500
+    size = (0,0,width,height)
+
+    image1 = Image.open(image1_str).crop(size)
     img1pix = image1.load()
+    image2 = Image.open(image2_str).crop(size)
     img2pix = image2.load()
+    image3 = Image.open(image3_str).crop(size)
     img3pix = image3.load()
-    img1width, img1height = image1.size
-    for x in range(img1width):
-        for y in range(img1height):
+    for x in range(width):
+        for y in range(height):
             alpha_loc = 3
             cur_pix_im1 = img1pix[x, y]
             cur_pix_im2 = img2pix[x, y]
