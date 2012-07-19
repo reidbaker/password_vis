@@ -39,8 +39,8 @@ def main():
 def wordize(image_data):
     posterized = black_posterize(image_data, 150)
     transparent = color_to_transparent(posterized, (255, 0, 0), 10)
-    #text_img = Image.open('cloud_billabong_modified.png')
-    text_img = Image.open('debug_text.png')
+    text_img = Image.open('output_modified.png')
+    #text_img = Image.open('debug_text.png')
     text_x, text_y = text_img.size
     output_img = combine_with_mask(transparent, text_img, transparent)
     transparent_to_color(output_img, (255, 255, 255))
