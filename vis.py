@@ -6,6 +6,7 @@ from pytagcloud import create_tag_image, make_tags
 # Project imports
 from portrait_words import color_to_transparent
 from portrait_words import safe_save
+from portrait_words import combine_with_mask
 
 # Constants stored elsewhere
 from yahoo_passwords import YAHOO_PASSWORDS_SMALL
@@ -37,6 +38,12 @@ def main():
         0,
         'Lobster'
     )
+    im = transparent_combine(
+        Image.open("cloud_billabong_modified.png").crop((0,0,890,500)),
+        Image.open("cloud_myspace_modified.png").crop((0,0,890,500)),
+        Image.open("cloud_yahoo_modified.png").crop((0,0,890,500)),
+    )
+    safe_save("output.png", im)
 
 def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     '''
@@ -53,6 +60,26 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     words = color_to_transparent(words.rotate(rotation_degrees), WHITE, threshold)
     safe_save(name, words)
     os.remove(name)
+
+def transparent_combine(image1, image2, image3):
+    '''
+    '''
+    img1pix = image1.load()
+    img2pix = image2.load()
+    img3pix = image3.load()
+    img1width, img1height = image1.size
+    img2width, img2height = image2.size
+    img3width, img3height = image3.size
+    for x in range(img1width):
+        for y in range(img1height):
+            r1, g1, b1, a1 = img1pix[x, y]
+            r2, g2, b2, a2 = img2pix[x, y]
+            r3, g3, b3, a3 = img3pix[x, y]
+            #TODO make turnary
+            a = max(a1,a2,a3)
+            if a != 0:
+                img1pix[x, y] = (0,0,0)
+    return image1
 
 if __name__ == "__main__":
     main()
