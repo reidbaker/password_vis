@@ -28,7 +28,7 @@ def main():
         'cloud_billabong.png',
         BILLABONG_PASSWORDS_SMALL,
         45,
-        'Lobster'
+        'Philosopher'
     )
 
     transparent_word_cloud(
