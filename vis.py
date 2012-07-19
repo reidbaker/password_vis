@@ -6,7 +6,6 @@ from pytagcloud import create_tag_image, make_tags
 # Project imports
 from portrait_words import color_to_transparent
 from portrait_words import safe_save
-from portrait_words import combine_with_mask
 
 # Constants stored elsewhere
 from yahoo_passwords import YAHOO_PASSWORDS_SMALL
@@ -22,7 +21,7 @@ def main():
         'cloud_yahoo.png',
         YAHOO_PASSWORDS_SMALL,
         0,
-        'Lobster'
+        'Droid Sans'
     )
 
     transparent_word_cloud(
@@ -36,13 +35,14 @@ def main():
         'cloud_myspace.png',
         MYSPACE_PASSWORDS_SMALL,
         0,
-        'Lobster'
+        'Tangerine'
     )
     im = transparent_combine(
         Image.open("cloud_billabong_modified.png").crop((0,0,890,500)),
         Image.open("cloud_myspace_modified.png").crop((0,0,890,500)),
         Image.open("cloud_yahoo_modified.png").crop((0,0,890,500)),
     )
+    im.rotate(Image.ROTATE_90)
     safe_save("output.png", im)
 
 def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
