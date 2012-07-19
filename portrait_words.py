@@ -4,7 +4,9 @@ import optparse
 from PIL import Image
 
 def main():
-    """Retrieves file entered, manipulates it and saves a copy with a new name"""
+    """
+    Retrieves file entered, manipulates it and saves a copy with a new name
+    """
     # Parse options
     parser = optparse.OptionParser()
     parser.add_option(
@@ -41,7 +43,6 @@ def wordize(image_data):
     transparent = color_to_transparent(posterized, (255, 0, 0), 10)
     text_img = Image.open('output_modified.png')
     #text_img = Image.open('debug_text.png')
-    text_x, text_y = text_img.size
     output_img = combine_with_mask(transparent, text_img, transparent)
     transparent_to_color(output_img, (255, 255, 255))
     return output_img
@@ -63,8 +64,9 @@ def combine_with_mask(image1, image2, mask):
     img2width, img2height = image2.size
     for x in range(img1width):
         for y in range(img1height):
-            r, g, b, a = maskpix[x, y]
-            if a != 0:
+            # get the alpha layer
+            alpha = maskpix[x, y][3]
+            if alpha != 0:
                 r, g, b, a = img1pix[x, y]
                 grayscale_magnitude = (r + g + b) / 3
                 r2, g2, b2, a2 = img2pix[x % img2width, y % img2height] #TODO BOUNDS CHECKING
@@ -90,7 +92,6 @@ def grayscale_modify(sink, source):
     for x in range(width):
         for y in range(height):
             r, g, b, a = sink_pixels[x, y]
-            r2, g2, b2, a2 = source_pixels[x, y]
             if a == 255:
                 source_pixels[x, y] = (r, g, b, a)
 
@@ -103,8 +104,8 @@ def transparent_to_color(img, color):
     width, height = img.size
     for x in range(width):
         for y in range(height):
-            r, g, b, a = img_pixels[x, y]
-            if (a == 0):
+            alpha = img_pixels[x, y][3]
+            if (alpha == 0):
                 img_pixels[x, y] = (color[0], color[1], color[2], 255)
     
 
@@ -147,20 +148,21 @@ def color_to_transparent(img, color, threshold):
     width, height = converted_img.size
     for x in range(width):
         for y in range(height):
-            diff = (pixels[x, y][0] - color[0], pixels[x, y][1] - color[1], pixels[x, y][2] - color[2])
-            if abs(diff[0]) < threshold and abs(diff[1]) < threshold and abs(diff[2]) < threshold:
-                pixels[x, y] = (pixels[x, y][0], pixels[x, y][1], pixels[x, y][2], 0)
+            diff = (
+                pixels[x, y][0] - color[0],
+                pixels[x, y][1] - color[1],
+                pixels[x, y][2] - color[2]
+            )
+            if (abs(diff[0]) < threshold and
+                abs(diff[1]) < threshold and
+                abs(diff[2]) < threshold):
+                pixels[x, y] = (
+                    pixels[x, y][0],
+                    pixels[x, y][1],
+                    pixels[x, y][2],
+                    0
+                )
     return converted_img
-
-# for debug purposes only
-# @author Sean Gillespie
-def init_test(img):
-    from PIL import Image
-    from portrait_words import black_posterize
-    image = Image.open(img)
-    ret = black_posterize(image, 150)
-    ret2 = color_to_transparent(ret, (255, 0, 0), 10)
-    ret2.save('output.png', 'png')
 
 def safe_save(full_filename, new_image_data):
     """
