@@ -17,31 +17,27 @@ BLACK = (0,0,0)
 BLACK_SET = (BLACK,)
 
 def main():
-    transparent_word_cloud(
+    image1 = transparent_word_cloud(
         'cloud_yahoo.png',
         YAHOO_PASSWORDS_SMALL,
         0,
         'Droid Sans'
     )
 
-    transparent_word_cloud(
+    image2 = transparent_word_cloud(
         'cloud_billabong.png',
         BILLABONG_PASSWORDS_SMALL,
         45,
         'Philosopher'
     )
 
-    transparent_word_cloud(
+    image3 = transparent_word_cloud(
         'cloud_myspace.png',
         MYSPACE_PASSWORDS_SMALL,
         -30,
         'Tangerine'
     )
-    im = transparent_combine(
-        "cloud_yahoo_modified.png",
-        "cloud_billabong_modified.png",
-        "cloud_myspace_modified.png"
-    )
+    im = transparent_combine(image1, image2, image3)
     safe_save("output.png", im)
 
 def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
@@ -57,10 +53,10 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     create_tag_image(tags, name, size=(900, 600), fontname=fontname)
     words = Image.open(name)
     words = color_to_transparent(words.rotate(rotation_degrees), WHITE, threshold)
-    safe_save(name, words)
     os.remove(name)
+    return words
 
-def transparent_combine(image1_str, image2_str, image3_str):
+def transparent_combine(image1, image2, image3):
     '''
     Combines images 2 and 3 onto image 1 such that
     the greatest alpha layer is preserved
@@ -72,11 +68,14 @@ def transparent_combine(image1_str, image2_str, image3_str):
     height = 500
     size = (0,0,width,height)
 
-    image1 = Image.open(image1_str).crop(size)
-    img1pix = image1.load()
+    image1 = image1.crop(size)
+    image2 = image2.crop(size)
+    image3 = image3.crop(size)
 
-    img2pix = Image.open(image2_str).crop(size).load()
-    img3pix = Image.open(image3_str).crop(size).load()
+    img1pix = image1.load()
+    img2pix = image2.load()
+    img3pix = image3.load()
+
     for x in range(width):
         for y in range(height):
             alpha_loc = 3
