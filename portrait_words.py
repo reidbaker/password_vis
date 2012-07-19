@@ -37,9 +37,11 @@ def main():
 def wordize(image_data):
     posterized = black_posterize(image_data, 150)
     transparent = color_to_transparent(posterized, (255, 0, 0), 10)
-    text_img = Image.open('cloud_billabong.png')
+    #text_img = Image.open('cloud_billabong_modified.png')
+    text_img = Image.open('debug_text.png')
     text_x, text_y = text_img.size
     output_img = combine_with_mask(transparent, text_img, transparent)
+    transparent_to_color(output_img, (255, 255, 255))
     return output_img
 
 def combine_with_mask(image1, image2, mask):
@@ -47,8 +49,11 @@ def combine_with_mask(image1, image2, mask):
     Combines two images into one image such that image2 exists on top of image
     1. The alpha of the mask is used to determine where image2 is pasted onto
     image1.
-    WARNING AT THIS POINT IN DEVELOPMENT THIS CODE DOES NOT DO BOUNDS CHECKING
+    WARNING AT THIS POINT IN DEVELOPMENT THIS
+    CODE DOES NOT DO BOUNDS CHECKING
     '''
+    image1_copy = image1.copy()
+    image2 = image2.convert('RGBA')
     img1pix = image1.load()
     img2pix = image2.load()
     maskpix = mask.load()
@@ -61,8 +66,45 @@ def combine_with_mask(image1, image2, mask):
                 r, g, b, a = img1pix[x, y]
                 grayscale_magnitude = (r + g + b) / 3
                 r2, g2, b2, a2 = img2pix[x % img2width, y % img2height] #TODO BOUNDS CHECKING
-                img1pix[x, y] = (int(r2 * (grayscale_magnitude / float(255))), int(g2 * (grayscale_magnitude / float(255))), int(b2 * (grayscale_magnitude / float(255))), a2)
+                if (r2, g2, b2) != (255, 255, 255):
+                    img1pix[x, y] = (int(r2 * (grayscale_magnitude / float(255))), int(g2 * (grayscale_magnitude / float(255))), int(b2 * (grayscale_magnitude / float(255))), a2)
+                else:
+                    img1pix[x, y] = (255, 255, 255, 0)
+    grayscale_modify(image1, image1_copy)
     return image1
+
+def grayscale_modify(sink, source):
+    '''
+    Uses the source image to modify the darkness of the sink image.
+    This method will FAIL if the size of the sink and the source are
+    not the same
+    '''
+    if (sink.size != source.size):
+        #TODO FAIL GRACEFULLY
+        return
+    width, height = sink.size
+    sink_pixels = sink.load()
+    source_pixels = source.load()
+    for x in range(width):
+        for y in range(height):
+            r, g, b, a = sink_pixels[x, y]
+            r2, g2, b2, a2 = source_pixels[x, y]
+            if a == 255:
+                source_pixels[x, y] = (r, g, b, a)
+
+def transparent_to_color(img, color):
+    '''
+    Converts all pixels with alpha = 0 to a color. Color is a 3-tuple of 
+    RGB values.
+    '''
+    img_pixels = img.load()
+    width, height = img.size
+    for x in range(width):
+        for y in range(height):
+            r, g, b, a = img_pixels[x, y]
+            if (a == 0):
+                img_pixels[x, y] = (color[0], color[1], color[2], 255)
+    
 
 def black_posterize(image, threshold):
     '''
