@@ -63,22 +63,29 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
 
 def transparent_combine(image1, image2, image3):
     '''
+    Combines 3 images such that the greatest alpha layer is preserved
+    Args:
+        All three PIL image data of the same size
     '''
+    BLACK = (0,0,0)
     img1pix = image1.load()
     img2pix = image2.load()
     img3pix = image3.load()
     img1width, img1height = image1.size
-    img2width, img2height = image2.size
-    img3width, img3height = image3.size
     for x in range(img1width):
         for y in range(img1height):
-            r1, g1, b1, a1 = img1pix[x, y]
-            r2, g2, b2, a2 = img2pix[x, y]
-            r3, g3, b3, a3 = img3pix[x, y]
-            #TODO make turnary
-            a = max(a1,a2,a3)
-            if a != 0:
-                img1pix[x, y] = (0,0,0)
+            alpha_loc = 3
+            cur_pix_im1 = img1pix[x, y]
+            cur_pix_im2 = img2pix[x, y]
+            cur_pix_im3 = img3pix[x, y]
+
+            alpha = max(
+                cur_pix_im1[alpha_loc],
+                cur_pix_im2[alpha_loc],
+                cur_pix_im3[alpha_loc],
+            )
+            if alpha != 0:
+                img1pix[x, y] = BLACK
     return image1
 
 if __name__ == "__main__":
