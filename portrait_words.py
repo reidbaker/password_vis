@@ -124,9 +124,14 @@ def safe_save(full_filename, new_image_data):
     Inputs:
         full_filename, filename to be saved including extention e.g, myfile.jpg
         new_image_data, PIL Image data to be saved
+    Returns
+        The name of the file after being saved
     """
     filename, extention = os.path.splitext(full_filename)
-    new_image_data.save(filename + '_modified' + extention)
+    new_filename = filename + '_modified' + extention
+    new_image_data.save(new_filename)
+    return new_filename
+    
 
 if __name__ == "__main__":
     main()
