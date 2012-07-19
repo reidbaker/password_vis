@@ -26,9 +26,11 @@ def main():
     full_filename =  opts.filename
     if full_filename != None:
         try:
+            print 'Beginning portrait word transform...'
             image_data = Image.open(full_filename)
             new_image_data = wordize(image_data)
-            safe_save(full_filename, new_image_data)
+            name = safe_save(full_filename, new_image_data)
+            print 'Portrait word transform saved to {0}'.format(name)
         except IOError:
             print "Can not modify " + full_filename
     else:
