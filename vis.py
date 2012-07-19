@@ -12,11 +12,17 @@ from yahoo_passwords import YAHOO_PASSWORDS_SMALL
 from billabong_passwords import BILLABONG_PASSWORDS_SMALL
 from myspace_passwords import MYSPACE_PASSWORDS_SMALL
 
-WHITE = (255,255,255)
-BLACK = (0,0,0)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 BLACK_SET = (BLACK,)
 
 def main():
+    '''
+    Creates word clouds of the leaked passwords
+    from yahoo, myspace, and billabong.
+    Word cloud is either black or transparent.
+    Output file is a png
+    '''
     image1 = transparent_word_cloud(
         'cloud_yahoo.png',
         YAHOO_PASSWORDS_SMALL,
@@ -37,8 +43,8 @@ def main():
         -30,
         'Tangerine'
     )
-    im = transparent_combine(image1, image2, image3)
-    safe_save("output.png", im)
+    transparent_combination = transparent_combine(image1, image2, image3)
+    safe_save("output.png", transparent_combination)
 
 def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     '''
@@ -52,7 +58,11 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     tags = make_tags(password_count, maxsize=120, colors=BLACK_SET)
     create_tag_image(tags, name, size=(900, 600), fontname=fontname)
     words = Image.open(name)
-    words = color_to_transparent(words.rotate(rotation_degrees), WHITE, threshold)
+    words = color_to_transparent(
+        words.rotate(rotation_degrees),
+        WHITE,
+        threshold
+    )
     os.remove(name)
     return words
 
@@ -61,12 +71,11 @@ def transparent_combine(image1, image2, image3):
     Combines images 2 and 3 onto image 1 such that
     the greatest alpha layer is preserved
     Args:
-        All three are strings that correspond to a png file
+        All three are PIL image data
     '''
-    BLACK = (0,0,0)
     width = 890
     height = 500
-    size = (0,0,width,height)
+    size = (0, 0, width, height)
 
     image1 = image1.crop(size)
     image2 = image2.crop(size)
@@ -76,12 +85,12 @@ def transparent_combine(image1, image2, image3):
     img2pix = image2.load()
     img3pix = image3.load()
 
-    for x in range(width):
-        for y in range(height):
+    for row  in range(width):
+        for col in range(height):
             alpha_loc = 3
-            cur_pix_im1 = img1pix[x, y]
-            cur_pix_im2 = img2pix[x, y]
-            cur_pix_im3 = img3pix[x, y]
+            cur_pix_im1 = img1pix[row, col]
+            cur_pix_im2 = img2pix[row, col]
+            cur_pix_im3 = img3pix[row, col]
 
             alpha = max(
                 cur_pix_im1[alpha_loc],
@@ -89,7 +98,7 @@ def transparent_combine(image1, image2, image3):
                 cur_pix_im3[alpha_loc],
             )
             if alpha != 0:
-                img1pix[x, y] = BLACK
+                img1pix[row, col] = BLACK
     return image1
 
 if __name__ == "__main__":
