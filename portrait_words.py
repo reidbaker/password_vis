@@ -48,7 +48,6 @@ def combine_with_mask(image1, image2, mask):
     1. The alpha of the mask is used to determine where image2 is pasted onto
     image1.
     WARNING AT THIS POINT IN DEVELOPMENT THIS CODE DOES NOT DO BOUNDS CHECKING
-    @author Sean Gillespie
     '''
     img1pix = image1.load()
     img2pix = image2.load()
@@ -59,7 +58,10 @@ def combine_with_mask(image1, image2, mask):
         for y in range(img1height):
             r, g, b, a = maskpix[x, y]
             if a != 0:
-                img1pix[x, y] = img2pix[x % img2width, y % img2height]
+                r, g, b, a = img1pix[x, y]
+                grayscale_magnitude = (r + g + b) / 3
+                r2, g2, b2, a2 = img2pix[x % img2width, y % img2height] #TODO BOUNDS CHECKING
+                img1pix[x, y] = (int(r2 * (grayscale_magnitude / float(255))), int(g2 * (grayscale_magnitude / float(255))), int(b2 * (grayscale_magnitude / float(255))), a2)
     return image1
 
 def black_posterize(image, threshold):
