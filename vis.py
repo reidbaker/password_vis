@@ -33,14 +33,14 @@ def main():
     image2 = transparent_word_cloud(
         'cloud_billabong.png',
         BILLABONG_PASSWORDS_SMALL,
-        45,
+        90,
         'Philosopher'
     )
 
     image3 = transparent_word_cloud(
         'cloud_myspace.png',
         MYSPACE_PASSWORDS_SMALL,
-        -30,
+        180,
         'Tangerine'
     )
     transparent_combination = transparent_combine(image1, image2, image3)
