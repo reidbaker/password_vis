@@ -4,6 +4,11 @@ import math
 
 from PIL import Image
 
+GRAY = (127, 127, 127)
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+
 def main():
     """
     Retrieves file entered, manipulates it and saves a copy with a new name
@@ -40,8 +45,6 @@ def main():
         print 'Must enter photo in this directory'
 
 def wordize(image_data):
-    RED = (255, 0, 0)
-###    WHITE = (255, 255, 255)
     posterized = black_posterize(image_data, 150)
     transparent = color_to_transparent(posterized, RED, 10)
     text_img = Image.open('output_modified.png')
@@ -82,9 +85,8 @@ def combine_with_mask(image1, image2, mask):
                 r, g, b, a = img1pix[x, y]
                 grayscale_magnitude = (r + g + b) / 3
                 r2, g2, b2, a2 = img2pix[x % img2width, y % img2height] #TODO BOUNDS CHECKING
-                if (r2, g2, b2) != (255, 255, 255):
-                    # TODO make method and add discription of what is happening
-                    img1pix[x, y] = (int(r2 * (grayscale_magnitude / float(255))), int(g2 * (grayscale_magnitude / float(255))), int(b2 * (grayscale_magnitude / float(255))), a2)
+                if (r2, g2, b2) == BLACK:
+                    img1pix[x, y] = (int(grayscale_magnitude), int(grayscale_magnitude), int(grayscale_magnitude), 255)
                 else:
                     img1pix[x, y] = (255, 255, 255, 0)
     grayscale_modify(image1, image1_copy)
@@ -151,12 +153,12 @@ def split_black_gray(red_val, green_val, blue_val):
           (green_val > gray_lower_threshold and green_val < gray_upper_threshold) and
           (blue_val > gray_lower_threshold and blue_val < gray_upper_threshold)):
         # TODO make all colors constants at top
-        color = (127, 127, 127) # gray
+        color = GRAY
     elif (red_val < black_threshold and
           green_val < black_threshold and
           blue_val < black_threshold):
         # TODO make all colors constants at top
-        color = (0, 0, 0) # black
+        color = BLACK
     else:
         color = (red_val, green_val, blue_val)
     return color
@@ -225,7 +227,12 @@ def gradient_fill(function, img, replace_color=(0, 0, 0), tolerance=10):
             img_r, img_g, img_b, img_a = pixels[x, y]
             replace_r, replace_g, replace_b = replace_color
             # take every thing that is transparent
-            if img_a > 255 - tolerance:
+            if not img_a > 255 - tolerance:
+                pass
+            elif (img_r, img_g, img_b) == GRAY:
+                r, g, b = function(x, y)
+                pixels[x, y] = (r, g, b, 127)
+            else:
                 pixels[x, y] = function(x, y)
 
 def gradient_func_factory(color1, color2, img_size):
@@ -239,7 +246,7 @@ def gradient_func_factory(color1, color2, img_size):
        img_size, the size of an image in the form of a tuple (width, height)
     Returns:
        A function that, given X and Y coordinates, will return the appropriate
-       color pixel such that the entire image becomes a gradient.
+       color pixel such that the entire image becomes a gradient of the form (R, G, B)
     '''
     magnitude = lambda x, y: math.sqrt(x**2 + y**2)
     return lambda x, y: color_weighted_avg(
