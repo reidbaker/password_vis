@@ -1,5 +1,6 @@
 import os
 import optparse
+import math
 
 from PIL import Image
 
@@ -163,6 +164,83 @@ def color_to_transparent(img, color, threshold):
                     0
                 )
     return converted_img
+
+def gradient_fill(function, img, replace_color=(0, 0, 0), tolerance=10):
+    '''
+    Gradient takes in a function and an image and applies that function
+    to every pixel. The function MUST take in an X coordinate and Y coordinate
+    as parameters (i.e. func(x, y)). The image can be any image in any mode.
+
+    The replace_color parameter defines a color that the gradient will be
+    replacing in the image. The tolerance parameter is the distance away
+    from the replace_color that the program will replace with the gradient.
+ 
+    Inputs:
+       function, the "gradient" function to be applied at every pixel
+       img, the PIL Image to use
+       replace_color, the color to replace with the gradient
+       tolerance, the range of colors near the replace_color that will
+                  be allowed to count as the replace_color
+    
+    Returns:
+       Nothing
+    '''
+    width, height = img.size
+    pixels = img.load()
+    for x in range(width):
+        for y in range(height):
+            img_r, img_g, img_b = pixels[x, y]
+            replace_r, replace_g, replace_b = replace_color
+            if (abs(img_r - replace_r) < tolerance and
+                abs(img_g - replace_g) < tolerance and
+                abs(img_b - replace_b) < tolerance):
+                pixels[x, y] = function(x, y)
+
+def gradient_func_factory(color1, color2, img_size):
+    '''
+    This function generates a gradient function for use with gradient_fill.
+    Inputs:
+       Color1, the 'first' color, and the color that will be used at the top
+               left of the image. Color1 will fade into color2.
+       Color2, the 'second' color, and the color that will be used at the bottom
+               right of the image. Color2 is faded into by color1.
+       img_size, the size of an image in the form of a tuple (width, height)
+    Returns:
+       A function that, given X and Y coordinates, will return the appropriate
+       color pixel such that the entire image becomes a gradient.
+    '''
+    magnitude = lambda x, y: math.sqrt(x**2 + y**2)
+    return lambda x, y: color_weighted_avg(color1,
+                                           1 - (magnitude(x, y) / magnitude(img_size[0], img_size[1])), 
+                                           color2, 
+                                           magnitude(x, y) / magnitude(img_size[0], img_size[1]))
+                                           
+    
+def color_scalar_multiply(color, scale_factor):
+    '''
+    Takes all elements of a color tuple and multiplies it by a scale factor.
+    '''
+    color_out = ()
+    for element in color:
+        color_out = color_out + eval('({0},)'.format(str(int(element * scale_factor))))
+    return color_out
+
+def color_linear_add(color1, color2):
+    if len(color1) != len(color2):
+        return None
+    color_out = ()
+    for i in range(len(color1)):
+        color_out = color_out + eval('({0},)'.format(str(color1[i] + color2[i])))
+    return color_out
+
+def color_weighted_avg(color1, weight1, color2, weight2):
+    '''
+    Calculates a weighted average between two colors using the given
+    colors and weights.
+    '''
+    return color_linear_add(color_scalar_multiply(color1, weight1),
+                            color_scalar_multiply(color2, weight2))
+    
 
 def safe_save(full_filename, new_image_data):
     """
