@@ -11,3 +11,4 @@ Then clone Repo
 Then run vis.py
 >`python vis.py`
 
+Inspired by http://layersmagazine.com/photoshop-cs4-a-picture-worth-a-thousand-words.html
