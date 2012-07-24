@@ -46,10 +46,14 @@ def wordize(image_data):
     #text_img = Image.open('debug_text.png')
     output_img = combine_with_mask(transparent, text_img, transparent)
     transparent_to_color(output_img, (255, 255, 255))
-    gradient_fill(gradient_func_factory((255, 215, 0), 
-                                        (178, 34, 34),
-                                        output_img.size),
-                  output_img)
+    gradient_fill(
+        gradient_func_factory(
+            (255, 215, 0),
+            (178, 34, 34),
+            output_img.size
+        ),
+        output_img
+    )
     return output_img
 
 def combine_with_mask(image1, image2, mask):
@@ -118,19 +122,34 @@ def black_posterize(image, threshold):
     '''
     Posterizes an image such that light pixels are rendered transparent.
     Returns a new image.
-    @author Sean Gillespie
     '''
     copy_image = Image.new(image.mode, image.size, (255, 0, 0))
     width, height = copy_image.size
     pixels = image.load()
     copy_pixels = copy_image.load()
+    white_threshold = 10
     for i in range(width):
         for j in range(height):
             r, g, b = pixels[i, j]
-            average = (r + g + b) / 3
-            if average < threshold:
-                copy_pixels[i, j] = (average, average, average)
+            if not (r < white_threshold and
+                g < white_threshold and
+                b < white_threshold):
+                copy_pixels[i, j] = split_black_gray(r, g, b)
+    import ipdb; ipdb.set_trace()
     return copy_image
+
+def split_black_gray(red_val, green_val, blue_val):
+    gray_lower_threshold = 100
+    gray_upper_threshold = 155
+
+    if ((red_val > gray_lower_threshold or red_val < gray_upper_threshold) and
+          (green_val > gray_lower_threshold or green_val < gray_upper_threshold) and
+          (blue_val > gray_lower_threshold or blue_val < gray_upper_threshold)):
+        color = (127,127,127) # gray
+    else:
+        color = (255,255,255) # black
+
+    return color
 
 # Inverts an image. This operation is done in place and does not return
 # a new image.
@@ -214,11 +233,12 @@ def gradient_func_factory(color1, color2, img_size):
        color pixel such that the entire image becomes a gradient.
     '''
     magnitude = lambda x, y: math.sqrt(x**2 + y**2)
-    return lambda x, y: color_weighted_avg(color1,
-                                           1 - (magnitude(x, y) / magnitude(img_size[0], img_size[1])), 
-                                           color2, 
-                                           magnitude(x, y) / magnitude(img_size[0], img_size[1]))
-                                           
+    return lambda x, y: color_weighted_avg(
+        color1,
+        1 - (magnitude(x, y) / magnitude(img_size[0], img_size[1])),
+        color2,
+        magnitude(x, y) / magnitude(img_size[0], img_size[1])
+    )
     
 def color_scalar_multiply(color, scale_factor):
     '''
