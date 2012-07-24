@@ -40,12 +40,13 @@ def main():
         print 'Must enter photo in this directory'
 
 def wordize(image_data):
+    RED = (255, 0, 0)
+    WHITE = (255, 255, 255)
     posterized = black_posterize(image_data, 150)
-    transparent = color_to_transparent(posterized, (255, 0, 0), 10)
+    transparent = color_to_transparent(posterized, RED, 10)
     text_img = Image.open('output_modified.png')
-    #text_img = Image.open('debug_text.png')
     output_img = combine_with_mask(transparent, text_img, transparent)
-    transparent_to_color(output_img, (255, 255, 255))
+    transparent_to_color(output_img, WHITE)
     gradient_fill(
         gradient_func_factory(
             (255, 215, 0),
@@ -136,6 +137,11 @@ def black_posterize(image, threshold):
     return copy_image
 
 def split_black_gray(red_val, green_val, blue_val):
+    '''
+    Takes red green and blue values and splits them
+    into either black, gray or origional
+    returns a tuple of the form (red, green, blue)
+    '''
     gray_lower_threshold = 50
     gray_upper_threshold = 160
     black_threshold = 100
