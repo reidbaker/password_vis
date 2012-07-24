@@ -41,7 +41,7 @@ def main():
 
 def wordize(image_data):
     RED = (255, 0, 0)
-    WHITE = (255, 255, 255)
+###    WHITE = (255, 255, 255)
     posterized = black_posterize(image_data, 150)
     transparent = color_to_transparent(posterized, RED, 10)
     text_img = Image.open('output_modified.png')
