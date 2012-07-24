@@ -120,35 +120,35 @@ def transparent_to_color(img, color):
 
 def black_posterize(image, threshold):
     '''
-    Posterizes an image such that light pixels are rendered transparent.
+    Posterizes an image such that light pixels are rendered red.
     Returns a new image.
     '''
     copy_image = Image.new(image.mode, image.size, (255, 0, 0))
     width, height = copy_image.size
     pixels = image.load()
     copy_pixels = copy_image.load()
-    white_threshold = 10
     for i in range(width):
         for j in range(height):
             r, g, b = pixels[i, j]
-            if not (r < white_threshold and
-                g < white_threshold and
-                b < white_threshold):
-                copy_pixels[i, j] = split_black_gray(r, g, b)
-    import ipdb; ipdb.set_trace()
+            new_color = split_black_gray(r, g, b)
+            if new_color != (r, g, b):
+                copy_pixels[i, j] = new_color
     return copy_image
 
 def split_black_gray(red_val, green_val, blue_val):
-    gray_lower_threshold = 100
-    gray_upper_threshold = 155
-
-    if ((red_val > gray_lower_threshold or red_val < gray_upper_threshold) and
-          (green_val > gray_lower_threshold or green_val < gray_upper_threshold) and
-          (blue_val > gray_lower_threshold or blue_val < gray_upper_threshold)):
+    gray_lower_threshold = 50
+    gray_upper_threshold = 160
+    black_threshold = 100
+    if ((red_val > gray_lower_threshold and red_val < gray_upper_threshold) and
+          (green_val > gray_lower_threshold and green_val < gray_upper_threshold) and
+          (blue_val > gray_lower_threshold and blue_val < gray_upper_threshold)):
         color = (127,127,127) # gray
+    elif (red_val < black_threshold and
+          green_val < black_threshold and
+          blue_val < black_threshold):
+        color = (0, 0, 0) # black
     else:
-        color = (255,255,255) # black
-
+        color = (red_val, green_val, blue_val)
     return color
 
 # Inverts an image. This operation is done in place and does not return
