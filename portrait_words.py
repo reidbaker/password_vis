@@ -32,7 +32,7 @@ def main():
             print 'Beginning portrait word transform...'
             image_data = Image.open(full_filename)
             new_image_data = wordize(image_data)
-            name = safe_save(full_filename, new_image_data)
+            name = safe_save(full_filename, new_image_data, force_png=True)
             print 'Portrait word transform saved to {0}'.format(name)
         except IOError:
             print "Can not modify " + full_filename
@@ -59,7 +59,7 @@ def wordize(image_data):
 
 def combine_with_mask(image1, image2, mask):
     '''
-    Combines two images into one image such that image2 exists on top of image
+    Combines two images into one image such that image2 exists on top of image1
     1. The alpha of the mask is used to determine where image2 is pasted onto
     image1.
     WARNING AT THIS POINT IN DEVELOPMENT THIS
@@ -117,7 +117,6 @@ def transparent_to_color(img, color):
             alpha = img_pixels[x, y][3]
             if (alpha == 0):
                 img_pixels[x, y] = (color[0], color[1], color[2], 255)
-    
 
 def black_posterize(image, threshold):
     '''
@@ -272,7 +271,7 @@ def color_weighted_avg(color1, weight1, color2, weight2):
                             color_scalar_multiply(color2, weight2))
     
 
-def safe_save(full_filename, new_image_data):
+def safe_save(full_filename, new_image_data, force_png=False):
     """
     Saves image with new name
     Inputs:
@@ -282,6 +281,8 @@ def safe_save(full_filename, new_image_data):
         The name of the file after being saved
     """
     filename, extention = os.path.splitext(full_filename)
+    if force_png:
+        extention = '.png'
     new_filename = filename + '_modified' + extention
     new_image_data.save(new_filename)
     return new_filename
