@@ -46,7 +46,7 @@ def wordize(image_data):
     transparent = color_to_transparent(posterized, RED, 10)
     text_img = Image.open('output_modified.png')
     output_img = combine_with_mask(transparent, text_img, transparent)
-    transparent_to_color(output_img, WHITE)
+###    transparent_to_color(output_img, WHITE)
     gradient_fill(
         gradient_func_factory(
             (255, 215, 0),
@@ -67,6 +67,8 @@ def combine_with_mask(image1, image2, mask):
     '''
     image1_copy = image1.copy()
     image2 = image2.convert('RGBA')
+    wid, hig = image2.size
+    image2 = image2.crop((wid/10,hig/10,wid,hig))
     img1pix = image1.load()
     img2pix = image2.load()
     maskpix = mask.load()
