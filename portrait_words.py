@@ -224,9 +224,8 @@ def gradient_fill(function, img, replace_color=(0, 0, 0), tolerance=10):
         for y in range(height):
             img_r, img_g, img_b, img_a = pixels[x, y]
             replace_r, replace_g, replace_b = replace_color
-            if (abs(img_r - replace_r) < tolerance and
-                abs(img_g - replace_g) < tolerance and
-                abs(img_b - replace_b) < tolerance):
+            # take every thing that is transparent
+            if img_a > 255 - tolerance:
                 pixels[x, y] = function(x, y)
 
 def gradient_func_factory(color1, color2, img_size):
