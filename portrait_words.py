@@ -46,6 +46,10 @@ def wordize(image_data):
     #text_img = Image.open('debug_text.png')
     output_img = combine_with_mask(transparent, text_img, transparent)
     transparent_to_color(output_img, (255, 255, 255))
+    gradient_fill(gradient_func_factory((255, 215, 0), 
+                                        (178, 34, 34),
+                                        output_img.size),
+                  output_img)
     return output_img
 
 def combine_with_mask(image1, image2, mask):
@@ -189,7 +193,7 @@ def gradient_fill(function, img, replace_color=(0, 0, 0), tolerance=10):
     pixels = img.load()
     for x in range(width):
         for y in range(height):
-            img_r, img_g, img_b = pixels[x, y]
+            img_r, img_g, img_b, img_a = pixels[x, y]
             replace_r, replace_g, replace_b = replace_color
             if (abs(img_r - replace_r) < tolerance and
                 abs(img_g - replace_g) < tolerance and
