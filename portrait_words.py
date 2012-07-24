@@ -67,8 +67,8 @@ def combine_with_mask(image1, image2, mask):
     '''
     image1_copy = image1.copy()
     image2 = image2.convert('RGBA')
-    wid, hig = image2.size
-    image2 = image2.crop((wid/10,hig/10,wid,hig))
+    width, height = image2.size
+    image2 = image2.crop((width/10, height/10, width, height))
     img1pix = image1.load()
     img2pix = image2.load()
     maskpix = mask.load()
@@ -83,6 +83,7 @@ def combine_with_mask(image1, image2, mask):
                 grayscale_magnitude = (r + g + b) / 3
                 r2, g2, b2, a2 = img2pix[x % img2width, y % img2height] #TODO BOUNDS CHECKING
                 if (r2, g2, b2) != (255, 255, 255):
+                    # TODO make method and add discription of what is happening
                     img1pix[x, y] = (int(r2 * (grayscale_magnitude / float(255))), int(g2 * (grayscale_magnitude / float(255))), int(b2 * (grayscale_magnitude / float(255))), a2)
                 else:
                     img1pix[x, y] = (255, 255, 255, 0)
@@ -149,10 +150,12 @@ def split_black_gray(red_val, green_val, blue_val):
     if ((red_val > gray_lower_threshold and red_val < gray_upper_threshold) and
           (green_val > gray_lower_threshold and green_val < gray_upper_threshold) and
           (blue_val > gray_lower_threshold and blue_val < gray_upper_threshold)):
-        color = (127,127,127) # gray
+        # TODO make all colors constants at top
+        color = (127, 127, 127) # gray
     elif (red_val < black_threshold and
           green_val < black_threshold and
           blue_val < black_threshold):
+        # TODO make all colors constants at top
         color = (0, 0, 0) # black
     else:
         color = (red_val, green_val, blue_val)
