@@ -1,0 +1,298 @@
+Beginning portrait word transform...
+Portrait word transform saved to portrait_modified.png
+         9459716 function calls in 252.783 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001  256.042  256.042 portrait_words.py:1(<module>)
+        1    0.029    0.029  256.037  256.037 portrait_words.py:12(main)
+        1    0.020    0.020  135.919  135.919 portrait_words.py:285(safe_save)
+        1  133.866  133.866  134.872  134.872 Image.py:1394(save)
+        1    0.582    0.582  120.084  120.084 portrait_words.py:47(wordize)
+        1    1.022    1.022  116.099  116.099 portrait_words.py:203(gradient_fill)
+   242499    2.482    0.000  115.073    0.000 portrait_words.py:252(<lambda>)
+   242499    1.570    0.000  107.832    0.000 portrait_words.py:276(color_weighted_avg)
+  2182491   73.821    0.000   77.081    0.000 {eval}
+   484998   16.593    0.000   69.245    0.000 portrait_words.py:259(color_scalar_multiply)
+   242499    6.439    0.000   37.017    0.000 portrait_words.py:268(color_linear_add)
+   969996    3.035    0.000    4.759    0.000 portrait_words.py:251(<lambda>)
+  2182492    4.648    0.000    4.648    0.000 {method 'format' of 'str' objects}
+        1    1.291    1.291    2.069    2.069 portrait_words.py:181(color_to_transparent)
+   969996    1.724    0.000    1.724    0.000 {math.sqrt}
+        2    0.000    0.000    1.027    0.514 posixpath.py:95(splitext)
+        2    0.849    0.425    1.027    0.514 genericpath.py:85(_splitext)
+        1    0.550    0.550    0.992    0.992 portrait_words.py:126(black_posterize)
+   727543    0.937    0.000    0.937    0.000 {len}
+   663456    0.775    0.000    0.775    0.000 {abs}
+        1    0.078    0.078    0.748    0.748 PngImagePlugin.py:462(_save)
+   245009    0.575    0.000    0.575    0.000 {range}
+   305000    0.435    0.000    0.435    0.000 portrait_words.py:143(split_black_gray)
+        1    0.025    0.025    0.348    0.348 ImageFile.py:466(_save)
+        1    0.218    0.218    0.341    0.341 portrait_words.py:63(combine_with_mask)
+        3    0.205    0.068    0.205    0.068 {open}
+        6    0.132    0.022    0.199    0.033 PngImagePlugin.py:423(o32)
+        4    0.062    0.015    0.196    0.049 PngImagePlugin.py:443(putchunk)
+        2    0.107    0.054    0.193    0.096 PngImagePlugin.py:459(write)
+        4    0.178    0.045    0.178    0.045 {method 'rfind' of 'str' objects}
+        1    0.095    0.095    0.097    0.097 portrait_words.py:95(grayscale_modify)
+        2    0.079    0.039    0.079    0.039 {built-in method encode}
+       16    0.069    0.004    0.069    0.004 Image.py:606(load)
+       69    0.066    0.001    0.066    0.001 {chr}
+       13    0.059    0.005    0.059    0.005 {method 'write' of 'file' objects}
+       10    0.039    0.004    0.039    0.004 {PIL._imaging.crc32}
+        8    0.024    0.003    0.024    0.003 PngImagePlugin.py:420(o16)
+        2    0.000    0.000    0.023    0.012 ImageFile.py:124(load)
+        2    0.023    0.011    0.023    0.011 {built-in method decode}
+        2    0.000    0.000    0.022    0.011 Image.py:664(convert)
+        7    0.019    0.003    0.019    0.003 Image.py:83(isStringType)
+        1    0.017    0.017    0.017    0.017 {method 'flush' of 'file' objects}
+        1    0.014    0.014    0.014    0.014 {max}
+        1    0.008    0.008    0.008    0.008 PngImagePlugin.py:456(__init__)
+        2    0.000    0.000    0.004    0.002 Image.py:1943(open)
+        1    0.001    0.001    0.004    0.004 Image.py:27(<module>)
+        2    0.003    0.002    0.003    0.002 {built-in method convert}
+        1    0.000    0.000    0.003    0.003 {__import__}
+        3    0.001    0.000    0.003    0.001 Image.py:290(preinit)
+        1    0.000    0.000    0.003    0.003 FixTk.py:1(<module>)
+        1    0.001    0.001    0.002    0.002 __init__.py:4(<module>)
+        1    0.000    0.000    0.002    0.002 Image.py:1702(load)
+        1    0.000    0.000    0.001    0.001 optparse.py:1190(__init__)
+        1    0.000    0.000    0.001    0.001 Image.py:740(copy)
+        1    0.001    0.001    0.001    0.001 {built-in method copy}
+        1    0.000    0.000    0.001    0.001 Image.py:1750(new)
+        1    0.001    0.001    0.001    0.001 {PIL._imaging.fill}
+        1    0.001    0.001    0.001    0.001 {method 'close' of 'file' objects}
+        1    0.001    0.001    0.001    0.001 {built-in method crop}
+        1    0.001    0.001    0.001    0.001 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.001    0.001 gettext.py:580(gettext)
+        2    0.000    0.000    0.001    0.001 gettext.py:542(dgettext)
+        2    0.000    0.000    0.001    0.001 gettext.py:476(translation)
+        2    0.000    0.000    0.001    0.001 gettext.py:421(find)
+        2    0.000    0.000    0.001    0.000 ImageFile.py:72(__init__)
+        1    0.000    0.000    0.001    0.001 PngImagePlugin.py:34(<module>)
+        1    0.000    0.000    0.001    0.001 optparse.py:1257(_populate_option_list)
+        1    0.000    0.000    0.001    0.001 optparse.py:1247(_add_help_option)
+        1    0.000    0.000    0.001    0.001 JpegImagePlugin.py:272(_open)
+        1    0.000    0.000    0.001    0.001 optparse.py:1276(set_usage)
+        1    0.000    0.000    0.001    0.001 re.py:188(compile)
+        1    0.000    0.000    0.001    0.001 re.py:226(_compile)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:495(compile)
+       18    0.000    0.000    0.000    0.000 posixpath.py:60(join)
+        4    0.000    0.000    0.000    0.000 gettext.py:130(_expand_lang)
+       40    0.000    0.000    0.000    0.000 {method 'read' of 'file' objects}
+        1    0.000    0.000    0.000    0.000 GifImagePlugin.py:28(<module>)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:313(_open)
+       14    0.000    0.000    0.000    0.000 __init__.py:147(_check_size)
+        2    0.000    0.000    0.000    0.000 optparse.py:1007(add_option)
+        1    0.000    0.000    0.000    0.000 BmpImagePlugin.py:27(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:265(_reset_cache)
+        2    0.000    0.000    0.000    0.000 optparse.py:560(__init__)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:480(_code)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:663(parse)
+       21    0.000    0.000    0.000    0.000 JpegImagePlugin.py:41(i16)
+       18    0.000    0.000    0.000    0.000 genericpath.py:15(exists)
+        1    0.000    0.000    0.000    0.000 ImagePalette.py:19(<module>)
+        4    0.000    0.000    0.000    0.000 locale.py:339(normalize)
+       10    0.000    0.000    0.000    0.000 Image.py:2114(register_extension)
+        1    0.000    0.000    0.000    0.000 JpegImagePlugin.py:35(<module>)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:301(_parse_sub)
+        3    0.000    0.000    0.000    0.000 JpegImagePlugin.py:54(APP)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:379(_parse)
+       82    0.000    0.000    0.000    0.000 {ord}
+       24    0.000    0.000    0.000    0.000 string.py:229(upper)
+       75    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 sre_compile.py:32(_compile)
+        1    0.000    0.000    0.000    0.000 optparse.py:1367(parse_args)
+        3    0.000    0.000    0.000    0.000 __init__.py:78(CFUNCTYPE)
+        1    0.000    0.000    0.000    0.000 JpegImagePlugin.py:121(SOF)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:383(load_read)
+        1    0.000    0.000    0.000    0.000 Image.py:387(_getencoder)
+       55    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 PpmImagePlugin.py:18(<module>)
+        2    0.000    0.000    0.000    0.000 optparse.py:609(_set_attrs)
+       52    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {apply}
+       18    0.000    0.000    0.000    0.000 {posix.stat}
+        5    0.000    0.000    0.000    0.000 sre_compile.py:178(_compile_charset)
+        2    0.000    0.000    0.000    0.000 PngImagePlugin.py:110(call)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:361(_compile_info)
+        3    0.000    0.000    0.000    0.000 __init__.py:493(PYFUNCTYPE)
+        2    0.000    0.000    0.000    0.000 PngImagePlugin.py:85(read)
+       38    0.000    0.000    0.000    0.000 {_ctypes.sizeof}
+        1    0.000    0.000    0.000    0.000 _endian.py:4(<module>)
+        6    0.000    0.000    0.000    0.000 sre_parse.py:201(get)
+        4    0.000    0.000    0.000    0.000 Image.py:460(_new)
+        5    0.000    0.000    0.000    0.000 Image.py:2082(register_open)
+       11    0.000    0.000    0.000    0.000 string.py:220(lower)
+        1    0.000    0.000    0.000    0.000 optparse.py:1419(_process_args)
+        1    0.000    0.000    0.000    0.000 ImageFile.py:30(<module>)
+        1    0.000    0.000    0.000    0.000 JpegImagePlugin.py:168(DQT)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:206(chunk_IHDR)
+        1    0.000    0.000    0.000    0.000 posixpath.py:341(abspath)
+       28    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        7    0.000    0.000    0.000    0.000 sre_parse.py:182(__next)
+        8    0.000    0.000    0.000    0.000 UserDict.py:58(get)
+       25    0.000    0.000    0.000    0.000 {isinstance}
+        4    0.000    0.000    0.000    0.000 PngImagePlugin.py:43(i32)
+       26    0.000    0.000    0.000    0.000 {setattr}
+        1    0.000    0.000    0.000    0.000 optparse.py:1516(_process_short_opts)
+        2    0.000    0.000    0.000    0.000 {_ctypes.POINTER}
+       24    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        5    0.000    0.000    0.000    0.000 Image.py:2104(register_save)
+        2    0.000    0.000    0.000    0.000 JpegImagePlugin.py:50(Skip)
+        1    0.000    0.000    0.000    0.000 optparse.py:1318(get_default_values)
+        8    0.000    0.000    0.000    0.000 ImageFile.py:516(_safe_read)
+        1    0.000    0.000    0.000    0.000 posixpath.py:312(normpath)
+        2    0.000    0.000    0.000    0.000 Image.py:371(_getdecoder)
+        2    0.000    0.000    0.000    0.000 __init__.py:49(normalize_encoding)
+        2    0.000    0.000    0.000    0.000 ImageFile.py:227(load_prepare)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:117(crc)
+        1    0.000    0.000    0.000    0.000 __init__.py:349(__init__)
+        4    0.000    0.000    0.000    0.000 string.py:308(join)
+        1    0.000    0.000    0.000    0.000 ImageColor.py:20(<module>)
+        2    0.000    0.000    0.000    0.000 optparse.py:588(_set_opt_strings)
+       18    0.000    0.000    0.000    0.000 {_struct.calcsize}
+       15    0.000    0.000    0.000    0.000 {built-in method pixel_access}
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:375(load_prepare)
+        8    0.000    0.000    0.000    0.000 Image.py:449(__init__)
+        2    0.000    0.000    0.000    0.000 {PIL._imaging.new}
+        7    0.000    0.000    0.000    0.000 {hasattr}
+        3    0.000    0.000    0.000    0.000 Image.py:2094(register_mime)
+        1    0.000    0.000    0.000    0.000 optparse.py:365(__init__)
+        7    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 sre_parse.py:138(append)
+        4    0.000    0.000    0.000    0.000 sre_parse.py:257(_escape)
+       12    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:778(process)
+       12    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+        4    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+       11    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:200(__init__)
+        1    0.000    0.000    0.000    0.000 Image.py:760(crop)
+        3    0.000    0.000    0.000    0.000 Image.py:92(isTupleType)
+        1    0.000    0.000    0.000    0.000 optparse.py:932(__init__)
+        9    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 Image.py:503(__getattr__)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:140(getwidth)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:171(__init__)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:178(__init__)
+        1    0.000    0.000    0.000    0.000 Image.py:444(Image)
+        8    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        5    0.000    0.000    0.000    0.000 sre_compile.py:207(_optimize_charset)
+        8    0.000    0.000    0.000    0.000 UserDict.py:70(__contains__)
+        4    0.000    0.000    0.000    0.000 {method 'seek' of 'file' objects}
+        2    0.000    0.000    0.000    0.000 PngImagePlugin.py:41(i16)
+        5    0.000    0.000    0.000    0.000 {getattr}
+        6    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 optparse.py:579(_check_opt_strings)
+        1    0.000    0.000    0.000    0.000 optparse.py:837(__init__)
+        2    0.000    0.000    0.000    0.000 sre_compile.py:474(isstring)
+        6    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 optparse.py:832(isbasestring)
+        3    0.000    0.000    0.000    0.000 UserDict.py:18(__getitem__)
+        1    0.000    0.000    0.000    0.000 optparse.py:771(convert_value)
+        2    0.000    0.000    0.000    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:77(__init__)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:221(chunk_IDAT)
+        3    0.000    0.000    0.000    0.000 {min}
+        1    0.000    0.000    0.000    0.000 ImageMode.py:17(<module>)
+        4    0.000    0.000    0.000    0.000 {method 'reverse' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:410(load_end)
+        5    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method setimage}
+        1    0.000    0.000    0.000    0.000 {_ctypes.dlopen}
+        1    0.000    0.000    0.000    0.000 Image.py:1685(__init__)
+        3    0.000    0.000    0.000    0.000 __init__.py:104(CFunctionType)
+        1    0.000    0.000    0.000    0.000 posixpath.py:51(isabs)
+        1    0.000    0.000    0.000    0.000 ImageFile.py:69(ImageFile)
+        3    0.000    0.000    0.000    0.000 __init__.py:494(CFunctionType)
+        3    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:1242(_create_option_list)
+        2    0.000    0.000    0.000    0.000 BmpImagePlugin.py:55(_accept)
+        1    0.000    0.000    0.000    0.000 optparse.py:764(check_value)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:308(PngImageFile)
+        1    0.000    0.000    0.000    0.000 optparse.py:790(take_action)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:151(PngInfo)
+        1    0.000    0.000    0.000    0.000 ImagePalette.py:25(ImagePalette)
+        2    0.000    0.000    0.000    0.000 {method 'tell' of 'file' objects}
+        2    0.000    0.000    0.000    0.000 optparse.py:678(_check_dest)
+        2    0.000    0.000    0.000    0.000 JpegImagePlugin.py:261(_accept)
+        2    0.000    0.000    0.000    0.000 GifImagePlugin.py:47(_accept)
+        1    0.000    0.000    0.000    0.000 ImageFile.py:330(Parser)
+        2    0.000    0.000    0.000    0.000 {filter}
+        2    0.000    0.000    0.000    0.000 optparse.py:693(_check_const)
+        1    0.000    0.000    0.000    0.000 portrait_words.py:238(gradient_func_factory)
+        2    0.000    0.000    0.000    0.000 optparse.py:635(_check_type)
+        2    0.000    0.000    0.000    0.000 optparse.py:665(_check_choice)
+        1    0.000    0.000    0.000    0.000 {divmod}
+        1    0.000    0.000    0.000    0.000 {_ctypes.set_conversion_mode}
+        1    0.000    0.000    0.000    0.000 {_sre.compile}
+        2    0.000    0.000    0.000    0.000 optparse.py:708(_check_callback)
+        1    0.000    0.000    0.000    0.000 ImageFile.py:283(_ParserFile)
+        2    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 JpegImagePlugin.py:267(JpegImageFile)
+        2    0.000    0.000    0.000    0.000 optparse.py:699(_check_nargs)
+        2    0.000    0.000    0.000    0.000 __init__.py:429(__init__)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:169(PngStream)
+        2    0.000    0.000    0.000    0.000 optparse.py:980(_check_conflict)
+        2    0.000    0.000    0.000    0.000 optparse.py:629(_check_action)
+        1    0.000    0.000    0.000    0.000 GifImagePlugin.py:54(GifImageFile)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:75(ChunkStream)
+        2    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:1267(_init_parsing_state)
+        1    0.000    0.000    0.000    0.000 __init__.py:332(CDLL)
+        1    0.000    0.000    0.000    0.000 optparse.py:752(takes_value)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:302(_accept)
+        1    0.000    0.000    0.000    0.000 optparse.py:224(set_parser)
+        1    0.000    0.000    0.000    0.000 __init__.py:428(LibraryLoader)
+        1    0.000    0.000    0.000    0.000 __init__.py:388(PyDLL)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:103(close)
+        1    0.000    0.000    0.000    0.000 optparse.py:1361(_get_args)
+        1    0.000    0.000    0.000    0.000 __init__.py:193(c_uint)
+        1    0.000    0.000    0.000    0.000 __init__.py:255(c_void_p)
+        1    0.000    0.000    0.000    0.000 ImageFile.py:254(StubImageFile)
+        1    0.000    0.000    0.000    0.000 PpmImagePlugin.py:46(PpmImageFile)
+        1    0.000    0.000    0.000    0.000 __init__.py:233(c_byte)
+        1    0.000    0.000    0.000    0.000 __init__.py:294(c_wchar)
+        1    0.000    0.000    0.000    0.000 optparse.py:959(set_conflict_handler)
+        1    0.000    0.000    0.000    0.000 __init__.py:189(c_int)
+        1    0.000    0.000    0.000    0.000 ImageMode.py:22(ModeDescriptor)
+        1    0.000    0.000    0.000    0.000 __init__.py:291(c_wchar_p)
+        1    0.000    0.000    0.000    0.000 __init__.py:238(c_char)
+        1    0.000    0.000    0.000    0.000 Image.py:34(_imaging_not_installed)
+        1    0.000    0.000    0.000    0.000 _endian.py:26(_swapped_meta)
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 _endian.py:49(BigEndianStructure)
+        1    0.000    0.000    0.000    0.000 __init__.py:172(c_ushort)
+        1    0.000    0.000    0.000    0.000 __init__.py:205(c_longdouble)
+        1    0.000    0.000    0.000    0.000 Image.py:407(_E)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:195(match)
+        1    0.000    0.000    0.000    0.000 __init__.py:180(c_ulong)
+        1    0.000    0.000    0.000    0.000 __init__.py:243(c_char_p)
+        1    0.000    0.000    0.000    0.000 Image.py:1722(ImageTransformHandler)
+        1    0.000    0.000    0.000    0.000 optparse.py:1312(_get_all_options)
+        1    0.000    0.000    0.000    0.000 __init__.py:197(c_float)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:90(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:176(c_long)
+        1    0.000    0.000    0.000    0.000 BmpImagePlugin.py:61(BmpImageFile)
+        1    0.000    0.000    0.000    0.000 optparse.py:1406(check_values)
+        1    0.000    0.000    0.000    0.000 optparse.py:943(_create_option_mappings)
+        1    0.000    0.000    0.000    0.000 PpmImagePlugin.py:40(_accept)
+        1    0.000    0.000    0.000    0.000 PngImagePlugin.py:453(_idat)
+        1    0.000    0.000    0.000    0.000 __init__.py:201(c_double)
+        1    0.000    0.000    0.000    0.000 optparse.py:964(set_description)
+        1    0.000    0.000    0.000    0.000 Image.py:1718(ImagePointHandler)
+        1    0.000    0.000    0.000    0.000 __init__.py:168(c_short)
+        1    0.000    0.000    0.000    0.000 __init__.py:359(_FuncPtr)
+        1    0.000    0.000    0.000    0.000 __init__.py:226(c_ubyte)
+        1    0.000    0.000    0.000    0.000 __init__.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:260(c_bool)
+        1    0.000    0.000    0.000    0.000 BmpImagePlugin.py:173(DibImageFile)
+        1    0.000    0.000    0.000    0.000 Image.py:1683(_ImageCrop)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:67(__init__)
+        1    0.000    0.000    0.000    0.000 __init__.py:159(py_object)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 ImageFile.py:236(load_end)
+
+
