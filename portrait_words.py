@@ -45,7 +45,7 @@ def main():
         print 'Must enter photo in this directory'
 
 def wordize(image_data):
-    posterized = black_posterize(image_data, 150)
+    posterized = black_posterize(image_data)
     transparent = color_to_transparent(posterized, RED, 10)
     text_img = Image.open('output_modified.png')
     output_img = combine_with_mask(transparent, text_img, transparent)
@@ -123,7 +123,7 @@ def transparent_to_color(img, color):
             if (alpha == 0):
                 img_pixels[x, y] = (color[0], color[1], color[2], 255)
 
-def black_posterize(image, threshold):
+def black_posterize(image):
     '''
     Posterizes an image such that light pixels are rendered red.
     Returns a new image.
@@ -147,7 +147,7 @@ def split_black_gray(red_val, green_val, blue_val):
     returns a tuple of the form (red, green, blue)
     '''
     gray_lower_threshold = 50
-    gray_upper_threshold = 160
+    gray_upper_threshold = 200
     black_threshold = 100
     if ((red_val > gray_lower_threshold and red_val < gray_upper_threshold) and
           (green_val > gray_lower_threshold and green_val < gray_upper_threshold) and
