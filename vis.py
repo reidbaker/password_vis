@@ -8,9 +8,7 @@ from portrait_words import color_to_transparent
 from portrait_words import safe_save
 
 # Constants stored elsewhere
-from yahoo_passwords import YAHOO_PASSWORDS_SMALL
-from billabong_passwords import BILLABONG_PASSWORDS_SMALL
-from myspace_passwords import MYSPACE_PASSWORDS_SMALL
+from british_words import BRITISH_WORDS_SMALL
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -23,30 +21,38 @@ def main():
     Word cloud is either black or transparent.
     Output file is a png
     '''
+    cloud_width = 1800
+    cloud_height = 1200
     image1 = transparent_word_cloud(
         'cloud_yahoo.png',
-        YAHOO_PASSWORDS_SMALL,
+        BRITISH_WORDS_SMALL,
         0,
-        'Droid Sans'
+        'Droid Sans',
+        cloud_width,
+        cloud_height
     )
 
     image2 = transparent_word_cloud(
         'cloud_billabong.png',
-        BILLABONG_PASSWORDS_SMALL,
+        BRITISH_WORDS_SMALL,
         90,
-        'Philosopher'
+        'Philosopher',
+        cloud_width,
+        cloud_height
     )
 
     image3 = transparent_word_cloud(
         'cloud_myspace.png',
-        MYSPACE_PASSWORDS_SMALL,
+        BRITISH_WORDS_SMALL,
         180,
-        'Tangerine'
+        'Tangerine',
+        cloud_width,
+        cloud_height
     )
-    transparent_combination = transparent_combine(image1, image2, image3)
+    transparent_combination = transparent_combine(cloud_width, cloud_height, image1, image2, image3)
     safe_save("output.png", transparent_combination)
 
-def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
+def transparent_word_cloud(name, password_count, rotation_degrees, fontname, width, height):
     '''
     Args:
         name - string that is the name to save png
@@ -56,7 +62,7 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     '''
     threshold = 10
     tags = make_tags(password_count, maxsize=120, colors=BLACK_SET)
-    create_tag_image(tags, name, size=(900, 600), fontname=fontname)
+    create_tag_image(tags, name, size=(width, height), fontname=fontname)
     words = Image.open(name)
     words = color_to_transparent(
         words.rotate(rotation_degrees),
@@ -66,15 +72,17 @@ def transparent_word_cloud(name, password_count, rotation_degrees, fontname):
     os.remove(name)
     return words
 
-def transparent_combine(image1, image2, image3):
+def transparent_combine(img_width, img_height, image1, image2, image3):
     '''
     Combines images 2 and 3 onto image 1 such that
     the greatest alpha layer is preserved
     Args:
         All three are PIL image data
     '''
-    width = 890
-    height = 500
+    # This is a hack to make the words more dense
+    width = int(img_width * .9)
+    height = int(img_height * .9)
+
     size = (0, 0, width, height)
 
     image1 = image1.crop(size)
