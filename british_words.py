@@ -1,610 +1,611 @@
-abseil
-accountancy
-Action Man
-Vipera berus
-advert
-agony aunt
-air marshal
-all change
-amongst
-answerphone
-anti-clockwise
-approved school
-argy-bargy
-arse
-arse over tit
-artic lorry
-aubergine
-Auntie Beeb
-autocue
-balls-up
-banger
-banknote
-bap
-barmaid
-barney
-barrister
-bedsit
-Beeb
-Belisha beacon
-bell-end
-berk
-bespoke
-bicky
-bint
-biro
-bits and bobs
-black pudding
-blag
-bleeder
-blimey
-bloke
-blower
-blues and twos
-boardies
-bobby
-Bob's your uncle
-bobbins
-bodge
-boffin
-bog
-bog roll
-bog-standard
-boiled sweet
-bollocks
-bone-idle
-bonnet
-boot
-boots
-bowler
-Brass monkey
-brekkie
-breve
-bristols
-brolly
-brown bread
-browned off
-bubble and squeak
-buggered
-building society
-bum bag
-bumble
-bumf
-bunce
-bureau de change
-burgle
-butty
-by-election
-by-law
-cack-handed
-cafetiere
-caff
-Cagoule
-call minder
-candidature
-candy floss
-caravan park
-car boot
-car hire
-car park
-carriageway
-carrier rocket
-cashpoint
-cats eye
-central heating boiler
-central reservation
-chancer
-char
-char
-charlady
-Chartered Accountant
-charwoman
-chav
-cheeky
-cheerio
-chemist
-child-minder
-chimney pot
-chinagraph pencil
-chinky
-chip shop
-chinwag
-chip and pin
-chucked
-chuffed
-cinema
-chunter
-clanger
-clapped out
-cleg
-clingfilm
-clock-watching
-coalition
-cobblers
-cock-up
-codswallop
-compere
-compulsory purchase
-conservatoire
-cool box
-cop off with
-coriander
-Cor Blimey
-costermonger
-cotton bud
-cotton wool
-council house
-counterfoil
-courgette
-cowl
-crack on(-to)
-crikey
-crisps
-crotchet
-cuddly toy
-cuppa
-current account
-daft
-dekko
-dene
-dibs
-dibble
-divvy
-doddle
-dodgems
-dodgy
-dogsbody
-the dog's bollocks
-dole
-dosh
-doss
-double first
-double parked
-draper
-draughts
-drawing pin
-dress circle
-driving licence
-dual carriageway
-dustbin
-dustbin man
-dustcart
-Elastoplast
-electric fire
-engaged tone
-estate agent
-estate car
-ex-directory
-extension lead
-faff
-fag end
-fairing
-fairy cake
-fairy lights
-feck
-fiddly
-fire brigade
-fiscal
-fish fingers
-fiver
-fizzy drink
-flannel
-flex
-flyover
-footie
-fortnight
-freephone
-French letter
-fringe
-funfair
-full stop
-Penny gaff
-gaffer
-gaffer tape
-gangway
-gaol
-gearbox
-gear-lever
-gen
-get off with
-git
-giro
-glandular fever
-gob
-gobby
-gob-shite
-gobsmacked
-gods
-go pear-shaped
-googled
-goolies
-gor blimey
-gormless
-go-slow
-grated cheese
-grotty
-greasy spoon
-green fingers
-greengrocer
-greengrocery
-group captain
-gumption
-gutties
-guv'nor
-half-eight
-hand brake
-Half penny
-ha'porth
-hash sign
-headmaster
-Heath Robinson
-high street
-higgledy-piggledy
-hire
-hire purchase
-hoarding
-hob
-hold-all
-holidaymaker
-hols
-home and away
-hoover
-hot up
-hundreds-and-thousands
-ice lolly
-icing sugar
-industrial action
-inverted commas
-invigilator
-ironmongery
-jacket potato
-jam sandwich
-jammy
-jemmy
-Jerry
-jiggery-pokery
-jimmy
-jobsworth
-johnny
-John Thomas
-Joey
-jumble sale
-jumper
-jump leads
-Karno's Army
-kecks
-kerfuffle
-kazi
-kip
-kit
-kitchen roll
-knackered
-knacker's yard
-knackers
-knickers
-ladybird
-launderette
-lav
-lead
-learnt
-legacy accounts
-lessons
-let-out
-letter box
-life assurance
-lift
-lock-in
-lodger
-lolly
-loo
-lorry
-loudhailer
-lower ground
-Goon_Show
-main
-mains power
-manky
-mardy
-maths
-MD
-Mexican wave
-mentioned in despatches
-milliard
-mince
-minge
-wikt
-minging
-minim
-mither
-moggie
-mong
-monged out
-MOT
-motorway
-mouthing off
-move house
-multi
-munter
-mush
-naff
-naff off
-nark
-nappy
-National Insurance
-nesh
-newsagent
-newsreader
-nice one
-nick
-nicked
-nicker
-niff
-Nissen hut
-NHS
-nob
-nobble
-nonce
-nosh
-nosy parker
-nous
-nowt
-number plate
-numpty
-nutter
-OAP
-off-licence
-off-the-peg
-offal
-oi
-Old bill
-one-off
-on the piss
-Oriental
-orientate
-Other Ranks
-overdraft
-overleaf
-owt
-oy
-package holiday
-Paki
-Paki shop
-panda car
-paper round
-paraffin
-paracetamol
-parkie
-parky
-Cornish pasty
-pear-shaped
-pelican crossing
-people carrier
-pernickety
-Perspex
-petrol
-petrol-head
-phone box
-pikey
-pillar box
-pillar-box red
-pillock
-pinch
-pisshead
-pissing it down
-plait
-plaster
-pleb
-plectrum
-plimsoll shoe
-plod
-Plonk
-plonker
-points
-ponce off
-pong
-pop
-poof
-pouffe
-porkyies
-postage and packing
-postal order
-postbox
-poste restante
-postie
-poxy
-pram
-prat
-press-up
-pritt-stick
-proper
-provisional licence
-pub
-publican
-pud
-pukka
-punch-up
-puncture
-punnet
-pushbike
-pushchair
-quango
-quaver
-quid
-quids in
-quieten
-quiff
-quim
-randy
-ranker
-rashers
-rat-arsed
-recce
-recorded delivery
-reel of cotton
-Register Office
-Return
-road-works
-rock
-rodgering
-ropey
-row
-reverse charge call
-rota
-roundabout
-rozzers
-rubber
-rubbish
-rucksack
-rug muncher
-rumpy pumpy
-sack
-Saloon
-sarky
-sarnie
-sat nav
-scouser
-screw
-scrubber
-scrumpy
-scrumping
-self-raising flour
-secateurs
-secondment
-Sellotape
-semibreve
-send to Coventry
-serviette
-shafted
-shandy
-shanks's pony
-shite
-shop
-sixes and sevens
-skew-whiff
-skint
-Skip container
-skive off
-slag
-slag off
-slaphead
-slapper
-sleeping partner
-sleeping policeman
-slippy
-slowcoach
-smalls
-smart dress
-smeghead
-snog
-soap dodger
-sod off
-spacker
-spanner
-spawny
-spiffing
-spiv
-spliff
-spot on
-spotted dick
-squaddie
-squadron leader
-squidgy
-squiffy
-squiz
-stamp
-sticky-backed plastic
-stockist
-stone the crows
-straight away
-stroke
-strop
-stroppy
-subway
-suck it and see
-suss
-suspender belt
-swot
-sweets
-sweet FA
-swimming costume
-ta
-Taff
-takeaway
-take the piss
-takings
-Tannoy
-tapping up
-ta-ra
-telephone kiosk
-tea towel
-telerecording
-telly
-tenner
-Territorial
-tetchy
-thickie - person of low intelligence.
-throw a wobbly
-thruppennies
-tinned
-tip
-Tipp-Ex
-titchy
-titfer
-tits up
-toad-in-the-hole
-toff
-toffee apple
-toffee-nosed
-Tommy Atkins
-tonk
-tosser
-tosspot
-totty
-tout
-tower block
-trainers
-truncheon
-tuppence
-tuppenny-ha'penny
-turf accountant
-turn-indicator
-turning
-turn-ups
-twee
-twonk
-twopenn'orth
-uni
-up himself
-up sticks
-verger
-verruca
-vertically opposite angles
-WAGs
-wage packet
-wally
-wanker
-WC
-washing up
-wazzock
-well
-Wellington boots
-welly
-welly
-What ho
-whilst
-whinge
-white coffee
-white pudding
-witter
-wide boy
-windscreen
-wing mirrors
-winkle
-wobbler
-Y-fronts
-yob
-yomp
-yonks
-zed
-zebra crossing
-Zimmer frame
+BRITISH_WORDS_LAEGE = [
+("abseil",11),
+("accountancy",11),
+("Action Man",11),
+("Vipera berus",11),
+("advert",11),
+("agony aunt",11),
+("air marshal",11),
+("all change",11),
+("amongst",11),
+("answerphone",11),
+("anti-clockwise",11),
+("approved school",11),
+("argy-bargy",11),
+("arse",11),
+("arse over tit",11),
+("artic lorry",11),
+("aubergine",11),
+("Auntie Beeb",11),
+("autocue",11),
+("balls-up",11),
+("banger",11),
+("banknote",11),
+("bap",11),
+("barmaid",11),
+("barney",11),
+("barrister",11),
+("bedsit",11),
+("Beeb",11),
+("Belisha beacon",11),
+("bell-end",11),
+("berk",11),
+("bespoke",11),
+("bicky",11),
+("bint",11),
+("biro",11),
+("bits and bobs",11),
+("black pudding",11),
+("blag",11),
+("bleeder",11),
+("blimey",11),
+("bloke",11),
+("blower",11),
+("blues and twos",11),
+("boardies",11),
+("bobby",11),
+("Bob's your uncle",11),
+("bobbins",11),
+("bodge",11),
+("boffin",11),
+("bog",11),
+("bog roll",11),
+("bog-standard",11),
+("boiled sweet",11),
+("bollocks",11),
+("bone-idle",11),
+("bonnet",11),
+("boot",11),
+("boots",11),
+("bowler",11),
+("Brass monkey",11),
+("brekkie",11),
+("breve",11),
+("bristols",11),
+("brolly",11),
+("brown bread",11),
+("browned off",11),
+("bubble and squeak",11),
+("buggered",11),
+("building society",11),
+("bum bag",11),
+("bumble",11),
+("bumf",11),
+("bunce",11),
+("bureau de change",11),
+("burgle",11),
+("butty",11),
+("by-election",11),
+("by-law",11),
+("cack-handed",11),
+("cafetiere",11),
+("caff",11),
+("Cagoule",11),
+("call minder",11),
+("candidature",11),
+("candy floss",11),
+("caravan park",11),
+("car boot",11),
+("car hire",11),
+("car park",11),
+("carriageway",11),
+("carrier rocket",11),
+("cashpoint",11),
+("cats eye",11),
+("central heating boiler",11),
+("central reservation",11),
+("chancer",11),
+("char",11),
+("char",11),
+("charlady",11),
+("Chartered Accountant",11),
+("charwoman",11),
+("chav",11),
+("cheeky",11),
+("cheerio",11),
+("chemist",11),
+("child-minder",11),
+("chimney pot",11),
+("chinagraph pencil",11),
+("chinky",11),
+("chip shop",11),
+("chinwag",11),
+("chip and pin",11),
+("chucked",11),
+("chuffed",11),
+("cinema",11),
+("chunter",11),
+("clanger",11),
+("clapped out",11),
+("cleg",11),
+("clingfilm",11),
+("clock-watching",11),
+("coalition",11),
+("cobblers",11),
+("cock-up",11),
+("codswallop",11),
+("compere",11),
+("compulsory purchase",11),
+("conservatoire",11),
+("cool box",11),
+("cop off with",11),
+("coriander",11),
+("Cor Blimey",11),
+("costermonger",11),
+("cotton bud",11),
+("cotton wool",11),
+("council house",11),
+("counterfoil",11),
+("courgette",11),
+("cowl",11),
+("crack on(-to)",11),
+("crikey",11),
+("crisps",11),
+("crotchet",11),
+("cuddly toy",11),
+("cuppa",11),
+("current account",11),
+("daft",11),
+("dekko",11),
+("dene",11),
+("dibs",11),
+("dibble",11),
+("divvy",11),
+("doddle",11),
+("dodgems",11),
+("dodgy",11),
+("dogsbody",11),
+("the dog's bollocks",11),
+("dole",11),
+("dosh",11),
+("doss",11),
+("double first",11),
+("double parked",11),
+("draper",11),
+("draughts",11),
+("drawing pin",11),
+("dress circle",11),
+("driving licence",11),
+("dual carriageway",11),
+("dustbin",11),
+("dustbin man",11),
+("dustcart",11),
+("Elastoplast",11),
+("electric fire",11),
+("engaged tone",11),
+("estate agent",11),
+("estate car",11),
+("ex-directory",11),
+("extension lead",11),
+("faff",11),
+("fag end",11),
+("fairing",11),
+("fairy cake",11),
+("fairy lights",11),
+("feck",11),
+("fiddly",11),
+("fire brigade",11),
+("fiscal",11),
+("fish fingers",11),
+("fiver",11),
+("fizzy drink",11),
+("flannel",11),
+("flex",11),
+("flyover",11),
+("footie",11),
+("fortnight",11),
+("freephone",11),
+("French letter",11),
+("fringe",11),
+("funfair",11),
+("full stop",11),
+("Penny gaff",11),
+("gaffer",11),
+("gaffer tape",11),
+("gangway",11),
+("gaol",11),
+("gearbox",11),
+("gear-lever",11),
+("gen",11),
+("get off with",11),
+("git",11),
+("giro",11),
+("glandular fever",11),
+("gob",11),
+("gobby",11),
+("gob-shite",11),
+("gobsmacked",11),
+("gods",11),
+("go pear-shaped",11),
+("googled",11),
+("goolies",11),
+("gor blimey",11),
+("gormless",11),
+("go-slow",11),
+("grated cheese",11),
+("grotty",11),
+("greasy spoon",11),
+("green fingers",11),
+("greengrocer",11),
+("greengrocery",11),
+("group captain",11),
+("gumption",11),
+("gutties",11),
+("guv'nor",11),
+("half-eight",11),
+("hand brake",11),
+("Half penny",11),
+("ha'porth",11),
+("hash sign",11),
+("headmaster",11),
+("Heath Robinson",11),
+("high street",11),
+("higgledy-piggledy",11),
+("hire",11),
+("hire purchase",11),
+("hoarding",11),
+("hob",11),
+("hold-all",11),
+("holidaymaker",11),
+("hols",11),
+("home and away",11),
+("hoover",11),
+("hot up",11),
+("hundreds-and-thousands",11),
+("ice lolly",11),
+("icing sugar",11),
+("industrial action",11),
+("inverted commas",11),
+("invigilator",11),
+("ironmongery",11),
+("jacket potato",11),
+("jam sandwich",11),
+("jammy",11),
+("jemmy",11),
+("Jerry",11),
+("jiggery-pokery",11),
+("jimmy",11),
+("jobsworth",11),
+("johnny",11),
+("John Thomas",11),
+("Joey",11),
+("jumble sale",11),
+("jumper",11),
+("jump leads",11),
+("Karno's Army",11),
+("kecks",11),
+("kerfuffle",11),
+("kazi",11),
+("kip",11),
+("kit",11),
+("kitchen roll",11),
+("knackered",11),
+("knacker's yard",11),
+("knackers",11),
+("knickers",11),
+("ladybird",11),
+("launderette",11),
+("lav",11),
+("lead",11),
+("learnt",11),
+("legacy accounts",11),
+("lessons",11),
+("let-out",11),
+("letter box",11),
+("life assurance",11),
+("lift",11),
+("lock-in",11),
+("lodger",11),
+("lolly",11),
+("loo",11),
+("lorry",11),
+("loudhailer",11),
+("lower ground",11),
+("Goon_Show",11),
+("main",11),
+("mains power",11),
+("manky",11),
+("mardy",11),
+("maths",11),
+("MD",11),
+("Mexican wave",11),
+("mentioned in despatches",11),
+("milliard",11),
+("mince",11),
+("minge",11),
+("wikt",11),
+("minging",11),
+("minim",11),
+("mither",11),
+("moggie",11),
+("mong",11),
+("monged out",11),
+("MOT",11),
+("motorway",11),
+("mouthing off",11),
+("move house",11),
+("multi",11),
+("munter",11),
+("mush",11),
+("naff",11),
+("naff off",11),
+("nark",11),
+("nappy",11),
+("National Insurance",11),
+("nesh",11),
+("newsagent",11),
+("newsreader",11),
+("nice one",11),
+("nick",11),
+("nicked",11),
+("nicker",11),
+("niff",11),
+("Nissen hut",11),
+("NHS",11),
+("nob",11),
+("nobble",11),
+("nonce",11),
+("nosh",11),
+("nosy parker",11),
+("nous",11),
+("nowt",11),
+("number plate",11),
+("numpty",11),
+("nutter",11),
+("OAP",11),
+("off-licence",11),
+("off-the-peg",11),
+("offal",11),
+("oi",11),
+("Old bill",11),
+("one-off",11),
+("on the piss",11),
+("Oriental",11),
+("orientate",11),
+("Other Ranks",11),
+("overdraft",11),
+("overleaf",11),
+("owt",11),
+("oy",11),
+("package holiday",11),
+("Paki",11),
+("Paki shop",11),
+("panda car",11),
+("paper round",11),
+("paraffin",11),
+("paracetamol",11),
+("parkie",11),
+("parky",11),
+("Cornish pasty",11),
+("pear-shaped",11),
+("pelican crossing",11),
+("people carrier",11),
+("pernickety",11),
+("Perspex",11),
+("petrol",11),
+("petrol-head",11),
+("phone box",11),
+("pikey",11),
+("pillar box",11),
+("pillar-box red",11),
+("pillock",11),
+("pinch",11),
+("pisshead",11),
+("pissing it down",11),
+("plait",11),
+("plaster",11),
+("pleb",11),
+("plectrum",11),
+("plimsoll shoe",11),
+("plod",11),
+("Plonk",11),
+("plonker",11),
+("points",11),
+("ponce off",11),
+("pong",11),
+("pop",11),
+("poof",11),
+("pouffe",11),
+("porkyies",11),
+("postage and packing",11),
+("postal order",11),
+("postbox",11),
+("poste restante",11),
+("postie",11),
+("poxy",11),
+("pram",11),
+("prat",11),
+("press-up",11),
+("pritt-stick",11),
+("proper",11),
+("provisional licence",11),
+("pub",11),
+("publican",11),
+("pud",11),
+("pukka",11),
+("punch-up",11),
+("puncture",11),
+("punnet",11),
+("pushbike",11),
+("pushchair",11),
+("quango",11),
+("quaver",11),
+("quid",11),
+("quids in",11),
+("quieten",11),
+("quiff",11),
+("quim",11),
+("randy",11),
+("ranker",11),
+("rashers",11),
+("rat-arsed",11),
+("recce",11),
+("recorded delivery",11),
+("reel of cotton",11),
+("Register Office",11),
+("Return",11),
+("road-works",11),
+("rock",11),
+("rodgering",11),
+("ropey",11),
+("row",11),
+("reverse charge call",11),
+("rota",11),
+("roundabout",11),
+("rozzers",11),
+("rubber",11),
+("rubbish",11),
+("rucksack",11),
+("rug muncher",11),
+("rumpy pumpy",11),
+("sack",11),
+("Saloon",11),
+("sarky",11),
+("sarnie",11),
+("sat nav",11),
+("scouser",11),
+("screw",11),
+("scrubber",11),
+("scrumpy",11),
+("scrumping",11),
+("self-raising flour",11),
+("secateurs",11),
+("secondment",11),
+("Sellotape",11),
+("semibreve",11),
+("send to Coventry",11),
+("serviette",11),
+("shafted",11),
+("shandy",11),
+("shanks's pony",11),
+("shite",11),
+("shop",11),
+("sixes and sevens",11),
+("skew-whiff",11),
+("skint",11),
+("Skip container",11),
+("skive off",11),
+("slag",11),
+("slag off",11),
+("slaphead",11),
+("slapper",11),
+("sleeping partner",11),
+("sleeping policeman",11),
+("slippy",11),
+("slowcoach",11),
+("smalls",11),
+("smart dress",11),
+("smeghead",11),
+("snog",11),
+("soap dodger",11),
+("sod off",11),
+("spacker",11),
+("spanner",11),
+("spawny",11),
+("spiffing",11),
+("spiv",11),
+("spliff",11),
+("spot on",11),
+("spotted dick",11),
+("squaddie",11),
+("squadron leader",11),
+("squidgy",11),
+("squiffy",11),
+("squiz",11),
+("stamp",11),
+("sticky-backed plastic",11),
+("stockist",11),
+("stone the crows",11),
+("straight away",11),
+("stroke",11),
+("strop",11),
+("stroppy",11),
+("subway",11),
+("suck it and see",11),
+("suss",11),
+("suspender belt",11),
+("swot",11),
+("sweets",11),
+("sweet FA",11),
+("swimming costume",11),
+("ta",11),
+("Taff",11),
+("takeaway",11),
+("take the piss",11),
+("takings",11),
+("Tannoy",11),
+("tapping up",11),
+("ta-ra",11),
+("telephone kiosk",11),
+("tea towel",11),
+("telerecording",11),
+("telly",11),
+("tenner",11),
+("Territorial",11),
+("tetchy",11),
+("thickie - person of low intelligence.",11),
+("throw a wobbly",11),
+("thruppennies",11),
+("tinned",11),
+("tip",11),
+("Tipp-Ex",11),
+("titchy",11),
+("titfer",11),
+("tits up",11),
+("toad-in-the-hole",11),
+("toff",11),
+("toffee apple",11),
+("toffee-nosed",11),
+("Tommy Atkins",11),
+("tonk",11),
+("tosser",11),
+("tosspot",11),
+("totty",11),
+("tout",11),
+("tower block",11),
+("trainers",11),
+("truncheon",11),
+("tuppence",11),
+("tuppenny-ha'penny",11),
+("turf accountant",11),
+("turn-indicator",11),
+("turning",11),
+("turn-ups",11),
+("twee",11),
+("twonk",11),
+("twopenn'orth",11),
+("uni",11),
+("up himself",11),
+("up sticks",11),
+("verger",11),
+("verruca",11),
+("vertically opposite angles",11),
+("WAGs",11),
+("wage packet",11),
+("wally",11),
+("wanker",11),
+("WC",11),
+("washing up",11),
+("wazzock",11),
+("well",11),
+("Wellington boots",11),
+("welly",11),
+("welly",11),
+("What ho",11),
+("whilst",11),
+("whinge",11),
+("white coffee",11),
+("white pudding",11),
+("witter",11),
+("wide boy",11),
+("windscreen",11),
+("wing mirrors",11),
+("winkle",11),
+("wobbler",11),
+("Y-fronts",11),
+("yob",11),
+("yomp",11),
+("yonks",11),
+("zed",11),
+("zebra crossing",11),
+("Zimmer frame",11)]
